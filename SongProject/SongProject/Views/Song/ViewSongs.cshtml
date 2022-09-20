@@ -1,0 +1,73 @@
+﻿@model SongProject.Models.Song
+
+@{
+    ViewBag.Title = "ViewSongs";
+}
+
+<h2>ViewSongs</h2>
+
+<div>
+    <h4>Song</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SongName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MusicDirector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MusicDirector)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieDirector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieDirector)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Search", new { @class = "btn btn-success" })
+</p>

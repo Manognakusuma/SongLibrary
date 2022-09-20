@@ -62,5 +62,10 @@ namespace SongProject.Controllers
             List<Song> songs = songRepository.GetSongs();
             return View(songs);
         }
+        public ActionResult ViewSongs(int id)
+        {
+            Song song = songRepository.GetSong(id);
+            return View(song);
+        }
     }
 }

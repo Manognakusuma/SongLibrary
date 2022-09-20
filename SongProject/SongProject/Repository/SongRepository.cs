@@ -20,6 +20,7 @@ namespace SongProject.Repository
         {
             return db.Songs.ToList();
         }
+
         public Song GetSong(int SongId)
         {
             return db.Songs.Find(SongId);

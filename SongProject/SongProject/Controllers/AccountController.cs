@@ -93,7 +93,7 @@ namespace SongProject.Controllers
         public ActionResult Logout()
         {
             Session.Clear();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
             // return View();
         }
     }

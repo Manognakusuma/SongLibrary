@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SongProject.Models
@@ -22,10 +23,12 @@ namespace SongProject.Models
         [StringLength(30)]
         [Column(TypeName = "varchar")]
         [Required(ErrorMessage = "Lang Requied")]
+        [DisplayName("Language")]
         public string Lang { get; set; }
         [StringLength(30)]
         [Column(TypeName = "varchar")]
         [Required(ErrorMessage = "Actor Requied")]
+        [DisplayName("Actors")]
         public string Actor { get; set; }
         [StringLength(30)]
         [Column(TypeName = "varchar")]
