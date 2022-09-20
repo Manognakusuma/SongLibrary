@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SongProject.Models.Song>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+
+<table class="table table-striped table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SongName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MusicDirector)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieDirector)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SongName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MusicDirector)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieDirector)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "SongDetails", new { id = item.SongId }, new { @class="btn btn-primary"}) 
+        </td>
+    </tr>
+}
+
+</table>
