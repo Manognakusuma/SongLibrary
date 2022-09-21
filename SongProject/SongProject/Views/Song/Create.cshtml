@@ -4,13 +4,18 @@
     ViewBag.Title = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create Song</h1>
+<style>
+    h1 {
+        margin-right: 150px;
+        margin-left: 250px;
+    }
+</style>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -82,7 +87,7 @@
 
 <div>
     @Html.ActionLink("Back to List", "GetAll", null, new { @class = "btn btn-primary" })
-  
+
 </div>
 
 @section Scripts {

@@ -4,7 +4,19 @@
     ViewBag.Title = "Register";
 }
 
-<h1 align="Center">Register</h1>
+<h1>Register</h1>
+<img src="~/Images/Register.jpeg"  height="100" width="100"/>
+<style>
+    img {
+        margin-right: 150px;
+        margin-left: 250px;
+    }
+
+    h1 {
+        margin-right: 150px;
+        margin-left: 250px;
+    }
+</style>
 
 
 @using (Html.BeginForm()) 
@@ -73,7 +85,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" class="btn btn-primary" />
+                <input type="submit" value="Submit" class="btn btn-success" />
                 <input type="reset" value="Reset" class="btn btn-danger" />
             </div>
         </div>
@@ -81,7 +93,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index", null, new { style = "color: red" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
 </div>
 
 @section Scripts {

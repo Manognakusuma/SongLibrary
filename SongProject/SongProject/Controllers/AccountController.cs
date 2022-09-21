@@ -62,9 +62,11 @@ namespace SongProject.Controllers
                 else
                 {
                     ModelState.AddModelError("", "UserName or password is wrong");
-                }
 
+                }
             }
+
+
             return View();
         }
 

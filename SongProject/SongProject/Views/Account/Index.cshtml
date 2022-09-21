@@ -4,13 +4,19 @@
     ViewBag.Title = "Index";
 }
 
-<h1 align="Center">Index</h1>
+<h1>Index</h1>
+<style>
+    h1 {
+        margin-right: 150px;
+        margin-left: 250px;
+    }
+</style>
 
 
 <p>
-    @Html.ActionLink("Create New", "Register",null, new { style = "color: red" })
+    @Html.ActionLink("Create New", "Register",null, new { @class = "btn btn-primary" })
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
@@ -21,9 +27,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
-        <td>
+        <th>
             @Html.DisplayNameFor(model => model.Username)
-        </td>
+        </th>
 
 
         <th></th>

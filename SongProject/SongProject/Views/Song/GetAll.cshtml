@@ -5,34 +5,39 @@
 }
 
 <h2>All Details</h2>
+<style>
+    .odd{
+        background-color:cadetblue;
+    }
+</style>
 
 <p>
     @Html.ActionLink("Create New", "Create",null,new {@class="btn btn-primary"})
 </p>
-<table class="table table-hover table-responsive">
+<table class="table table-striped">
     <tr>
-        <th>
+        <th class="odd">
             @Html.DisplayNameFor(model => model.SongName)
         </th>
-        <th>
+        <th class="odd">
             @Html.DisplayNameFor(model => model.MovieName)
         </th>
-        <th>
+        <th class="odd">
             @Html.DisplayNameFor(model => model.Year)
         </th>
-        <th>
+        <th class="odd">
             @Html.DisplayNameFor(model => model.Lang)
         </th>
-        <th>
+        <th class="odd">
             @Html.DisplayNameFor(model => model.Actor)
         </th>
-        <th>
+        <th class="odd">
             @Html.DisplayNameFor(model => model.MusicDirector)
         </th>
-        <th>
+        <th class="odd">
             @Html.DisplayNameFor(model => model.MovieDirector)
         </th>
-        <th></th>
+        <th class="odd"></th>
     </tr>
 
 @foreach (var item in Model) {

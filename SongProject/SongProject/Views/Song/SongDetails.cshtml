@@ -6,9 +6,13 @@
 
 <h2>SongDetails</h2>
 <style>
-    .dt{
-       // padding-top:20px;
+    .odd{
+       color:#8e0909
 
+    }
+    dl-horizontal{
+        padding-top:20px;
+        padding-bottom:30px;
     }
 </style>
 
@@ -16,7 +20,7 @@
     
     <hr />
     <dl class="dl-horizontal">
-        <span style="padding-top:10px">
+      
         <dt>
             @Html.DisplayNameFor(model => model.SongName)
         </dt>
@@ -24,7 +28,7 @@
         <dd>
             @Html.DisplayFor(model => model.SongName)
         </dd>
-        </span>
+        
 
         <dt>
             @Html.DisplayNameFor(model => model.MovieName)
@@ -77,6 +81,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.SongId }) |
-    @Html.ActionLink("Back to List", "GetAll")
+    @Html.ActionLink("Back to List", "GetAll", null, new { @class = "btn btn-primary" })
 </p>
